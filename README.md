@@ -31,10 +31,10 @@ Most sites I discovered where using the format:
 $ sudo /etc/init.d/mosquitto stop
 ```
 
-Then start mosquitto on port 1883:
+Then start mosquitto on port 3883:
 
 ```
-$ mosquitto -p 1883
+$ mosquitto -p 3883
 ```
 
 ## How to use
