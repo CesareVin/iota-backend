@@ -45,6 +45,19 @@ $ node index.js
 
 ## Theory about Backend element
 
+### Intro
+L’elaborato che abbiamo deciso di scrivere per testare iota si compone di tre principali elementi:
+- IoTa Backend.
+- IoTa Board.
+- IoTa Dashboard.
+
+L’idea è costruire un sistema che permetta ad un sensore di manifestare la propria presenza sul cloud 
+e che permetta ad una Dashboard di interagire con quest’ultimo on demand.
+
+![Schema dei soggetti](./img/schema_1.png)
+
+### Backend
+
 ![Backend schema](./img/schema_1.png)
 
 Al fine di creare una scenario IoT verosimile abbiamo sviluppato una piccola app in node.js che offre i servizi di storage, broker MQTT e WebServer (REST + WebSocket).
@@ -92,6 +105,6 @@ io.on('connection', (socket) => {
   
     io.emit("devices", devices);
     ...
-    
+
 });
 ```
