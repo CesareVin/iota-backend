@@ -58,7 +58,7 @@ e che permetta ad una Dashboard di interagire con quest’ultimo on demand.
 
 ### Backend
 
-![Backend schema](./img/schema_1.png)
+![Backend schema](./img/schema_2.png)
 
 Al fine di creare una scenario IoT verosimile abbiamo sviluppato una piccola app in node.js che offre i servizi di storage, broker MQTT e WebServer (REST + WebSocket).
 L’idea generale è che il backend esponga un servizio MQTT per i “devices”, un servizio che consenta, da un lato, a tutti i sensori e/o agli aggregatori di sensori di manifestare la propria presenza nel network IoT, dall’altro a tutti gli utilizzatori di reperire le informazioni riguardanti i device disponibili al fine di essere in grado di instaurare una connessione end to end con essi.
