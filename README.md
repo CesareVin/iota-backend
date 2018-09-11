@@ -9,7 +9,9 @@ $ npm install
 ```
 
 Second you need mosquitto mqtt Broker.
-When you get it with your favorite packages manager start mosquitto on port 3883:
+When you get it with your favorite packages manager start mosquitto on port 3883.
+N.B. Some systems when you install mosquitto from package manager start it as service on standard port (1883).
+Our project require mosquitto on port 3883 beacuse it bring up the MQTT broker trought Mosca on port 1883.
 
 ```
 $ mosquitto -p 3883
