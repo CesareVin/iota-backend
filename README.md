@@ -2,13 +2,15 @@
 
 ## How to configure
 
-Innanzitutto è necessario creare l'ambiente:
+Innanzitutto è necessario installare le dipendenze:
 
 ```
 $ npm install
 ```
 
 Per seconda cosa è necessario mosquitto mqtt Broker:
+
+### Ubuntu
 
 ```
 $ sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
@@ -28,12 +30,26 @@ Per stoppare e far partire il servizio è necessario eseguire:
 $ sudo service stop mosquitto
 $ sudo service start mosquitto #see note later
 ```
-
 Nel caso il comando precedente non dovesse funzionare, prego provare:
 
 ```
 $ sudo /etc/init.d/mosquitto stop
 ```
+
+o qualora il sistema utilizzi systemd
+
+```
+$ sudo systemctl stop mosquitto
+$ sudo systemctl start mosquitto
+```
+
+### Mac OSX
+
+```
+$ brew update
+$ brew install mosquitto
+```
+
 
 E quindi far partire mosquitto sulla porta 3883:
 
@@ -42,6 +58,11 @@ $ mosquitto -p 3883
 ```
 
 ## How to use
+
+Il servizio espone all'indirizzo `http://{host}/` un sito "statico", nel nostro scenario
+è previsto che il servizio esponga la nostra WebApp, la `iota-dashboard`.
+Il sito deve essere collocato nella cartella `webapp`.
+Per i dettagli riguardanti una compilazione per della dashboard per la produzione vedere il progetto `iota-dashboard`.
 
 ```
 $ node index.js
