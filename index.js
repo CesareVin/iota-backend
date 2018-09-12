@@ -9,7 +9,7 @@ const io = require('socket.io')(http);
 const devices = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use('/', express.static(__dirname + '/webapp'));
 //mosquitto backend for mosca
 var mosquittoBackend = {
   type: 'mqtt',
