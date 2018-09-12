@@ -17,7 +17,11 @@ $ sudo apt-get install mosquitto
 $ sudo apt-get install mosquitto-clients
 ```
 
-Dovrebbe automaticamente far partire mosquitto.
+Quando si installa mosquitto dal package manager questo fa partire mosquitto sulla porta 3883.
+
+N.B. Alcuni OS quando installi mosquitto dal package manager lo avviano come servizio sulla porta standard (1883).
+Il nostro progetto richiede mosquitto sulla porta 3883 perchè tira su MQTT broker attraverso Mosca sulla porta 1883.
+
 Per stoppare e far partire il servizio è necessario eseguire:
 
 ```
