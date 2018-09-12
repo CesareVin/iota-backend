@@ -2,13 +2,13 @@
 
 ## How to configure
 
-First you have to set the environment:
+Innanzitutto è necessario creare l'ambiente:
 
 ```
 $ npm install
 ```
 
-Second you need mosquitto mqtt Broker:
+Per seconda cosa è necessario mosquitto mqtt Broker:
 
 ```
 $ sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
@@ -17,21 +17,21 @@ $ sudo apt-get install mosquitto
 $ sudo apt-get install mosquitto-clients
 ```
 
-It should automatically start mosquitto.
-To Stop and start the service I needed to use:
+Dovrebbe automaticamente far partire mosquitto.
+Per stoppare e far partire il servizio è necessario eseguire:
 
 ```
 $ sudo service stop mosquitto
 $ sudo service start mosquitto #see note later
 ```
 
-Most sites I discovered where using the format:
+Nel caso il comando precedente non dovesse funzionare, prego provare:
 
 ```
 $ sudo /etc/init.d/mosquitto stop
 ```
 
-Then start mosquitto on port 3883:
+E quindi far partire mosquitto sulla porta 3883:
 
 ```
 $ mosquitto -p 3883
