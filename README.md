@@ -27,8 +27,7 @@ Il nostro progetto richiede mosquitto sulla porta 3883 perchè tira su MQTT brok
 Per stoppare e far partire il servizio è necessario eseguire:
 
 ```
-$ sudo service stop mosquitto
-$ sudo service start mosquitto #see note later
+$ sudo service stop mosquitto #see note later
 ```
 Nel caso il comando precedente non dovesse funzionare, prego provare:
 
@@ -36,11 +35,16 @@ Nel caso il comando precedente non dovesse funzionare, prego provare:
 $ sudo /etc/init.d/mosquitto stop
 ```
 
-o qualora il sistema utilizzi systemd
+o qualora il sistema utilizzi systemd:
 
 ```
 $ sudo systemctl stop mosquitto
-$ sudo systemctl start mosquitto
+```
+
+E quindi far partire mosquitto sulla porta 3883:
+
+```
+$ mosquitto -p 3883
 ```
 
 ### Mac OSX
